@@ -1,0 +1,13 @@
+SELECT
+    c.Nombre AS ClienteNombre,
+    c.Apellidos AS ClienteApellidos,
+    cm.Fecha,
+    p.Nombre AS ProductoNombre,
+    cm.Cantidad,
+    (p.PrecioUnitario * cm.Cantidad) AS Subtotal
+FROM
+    Clientes c
+    JOIN Compras cm ON c.DNI = cm.DNI_Cliente
+    JOIN Productos p ON cm.Codigo_Producto = p.Codigo
+WHERE
+    c.Nombre = 'Jose Perez';

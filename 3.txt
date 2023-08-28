@@ -1,0 +1,30 @@
+public class Cliente {
+    private String dni;
+    private String nombre;
+    private String apellidos;
+    private String direccion;
+    private LocalDate fechaNacimiento;
+
+    // Constructor, getters y setters
+}
+
+public class Producto {
+    private String codigo;
+    private String nombre;
+    private double precioUnitario;
+
+    // Constructor, getters y setters
+}
+
+import java.time.LocalDate;
+
+public class Compra {
+    private int id;
+    private Cliente cliente;
+    private Producto producto;
+    private LocalDate fecha;
+    private int cantidad;
+    private double subtotal;
+
+    // Constructor, getters y setters
+}
